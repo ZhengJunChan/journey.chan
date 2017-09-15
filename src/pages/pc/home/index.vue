@@ -1,17 +1,26 @@
 <template>
 <div class="home_Page">
-	首页
+	<!-- <upload></upload> -->
+	<div class="banner">
+	</div>
 </div>
 </template>
 
 <script>
+
+import { Upload } from '@/components'
+
 export default {
+  components: {
+    Upload
+  },
   mounted () {
     console.log(this.$box)
   }
 }
+
 </script>
 
-<style>
+<style lang="less" scoped>
 @import './home.less';
 </style>
