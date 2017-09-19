@@ -25,12 +25,12 @@
 		</div>
 
 		<ul class="list">
-			<router-link tag="li" to="/">新大陆</router-link>
-			<router-link tag="li" to="/">自由行</router-link>
-			<router-link tag="li" to="/">俱乐部</router-link>
-			<router-link tag="li" to="/">快报</router-link>
-			<router-link tag="li" to="/">新大陆</router-link>
-			<router-link tag="li" to="/">自由行</router-link>
+			<router-link tag="li" to="/" v-for="(item,index) in activityList"
+			:key="item.id" :style="{backgroudImage: `url(${item.coverImg})`}" v-if="index<5">
+				<div>
+					
+				</div>
+			</router-link>
 		</ul>
 	</div>
 
