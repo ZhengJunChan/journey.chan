@@ -1,8 +1,93 @@
-.home_Page{
-	.banner{
-		height: 540px;
-		background-image: url(/static/images/banner/5.jpg);
-		background-position: center;
-		background-size: cover;
-	}
+@import './../../../less/config.less';
+
+.home_Page {
+  /*******************************   banner   start   *******************************/
+  /***** banner *****/
+  .banner {
+    height: 540px;
+    position: relative;
+    background-image: url(/static/images/banner/3.jpg);
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(29, 23, 36, 0.5);
+    }
+  }
+
+  /***** nav *****/
+  .nav_bar {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    z-index: 1;
+    color: @whiteColor;
+    li {
+      cursor: pointer;
+      line-height: 29px;
+      padding: 0 15px 5px;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-color: @greenColor;
+      }
+    }
+  }
+
+  /***** 开启新的旅途 *****/
+  .activity_btn {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -107.5px;
+    top: 60%;
+  }
+
+  /*******************************   banner   end   *******************************/
+  /*******************************   img_list   start   *******************************/
+  .img_list {
+  	.header{
+  		text-align: center;
+  	}
+    .box_title {
+      font-size: 19px;
+      color: #71717c;
+      font-weight: 600;
+      text-align: center;
+      a {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        &:hover {
+          color: @greenColor;
+        }
+        &:after {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 75%;
+          height: 2px;
+          background-color: #6bb551;
+        }
+      }
+    }
+    .desc{
+    	margin-top: @contentDistance;
+    }
+    .list {
+    	margin-top: @bodyDistance;
+      li {
+        display: inline-block;
+        &:first-child {
+          width: 50%;
+        }
+      }
+    }
+  }
+  /*******************************   img_list   end   *******************************/
 }

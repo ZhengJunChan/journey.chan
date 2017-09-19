@@ -1,5 +1,9 @@
-import Upload from './upload'                           // 上传插件
+import Upload from './upload'                           // 上传
+import WaterFall from './water-fall'                    // 瀑布流
+import Btn from './button'                              // 按钮
 
 export {
-    Upload
+    Btn,
+    Upload,
+    WaterFall
 }
