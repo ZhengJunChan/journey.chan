@@ -24,13 +24,28 @@
 			<p class="desc">最近又发现特别美腻的地方啦啦啦啦！！！！快来！！！</p>
 		</div>
 
-		<ul class="list">
-			<router-link tag="li" to="/" v-for="(item,index) in activityList"
-			:key="item.id" :style="{backgroudImage: `url(${item.coverImg})`}" v-if="index<5">
-				<div>
-					
+		<ul class="list clear_float">
+			<router-link tag="li" v-for="(item, index) in activityList" :key="item.id" to="/"
+			:style="{backgroundImage: `url(${item.coverImg})`}">
+				<div class="bd_layer">
+					<!-- <img :src="item.coverImg"> -->
 				</div>
 			</router-link>
+		</ul>
+	</div>
+
+	<div class="module_box img_list">
+		<div class="header">
+			<h2 class="box_title">
+				<router-link to="/">新大陆</router-link>
+			</h2>
+			<p class="desc">最近又发现特别美腻的地方啦啦啦啦！！！！快来！！！</p>
+		</div>
+
+		<ul class="list">
+			<li v-for="(item,index) in activityList">
+				<router-link tag="div" to="/" :style="{backgroudImage: `url(${item.coverImg})`}"></router-link>
+			</li>
 		</ul>
 	</div>
 
